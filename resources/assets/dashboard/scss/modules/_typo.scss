@@ -1,0 +1,22 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+p {
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

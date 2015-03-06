@@ -1,0 +1,26 @@
+{
+    "name": "swen/blub",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Swen Gorschewski",
+            "email": "swen.gorschewski@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "app/controller",
+            "app/models"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/swengorschewski/ganymed-components"
+        }
+    ],
+    "require": {
+        "ganymed-components": "dev-master"
+    }
+
+}

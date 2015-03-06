@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "sip": "swengorschewski/sip"
+  }
+}

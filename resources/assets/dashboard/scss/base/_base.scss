@@ -1,0 +1,22 @@
+// break points for different screen sizes
+$breakpoint_medium: 40em;
+$breakpoint_large: 60em;
+
+// project colors
+$color_highlight: #009688;
+$color_light: #E4E4E4;
+$color_input: #bcbcbc;
+$color_dark: #000000;
+
+$color_error: #FF7878;
+$color_success: green;
+
+// misc
+$animation_duration: 0.2s;
+
+// clear fix
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}

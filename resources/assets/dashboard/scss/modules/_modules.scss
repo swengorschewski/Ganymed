@@ -1,0 +1,22 @@
+.login-form {
+	width: 24em;
+	background-color: #ffffff;
+
+	h1 {
+		font-size: 1.6em;
+		color: $color_highlight;
+		font-weight: 300;
+		margin: 1em 0 0 1em;
+		text-transform: uppercase;
+	}
+}
+
+.center-content {
+	width: 100%;
+	height: 100%;
+	background-color: $color_light;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
