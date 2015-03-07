@@ -47,7 +47,7 @@ $iocContainer->bind($bindings);
 |
 */
 
-$router = Router::getInstance();
+$router = new Router();
 require_once __DIR__ . '/../routes.php';
 
 /*
@@ -84,4 +84,4 @@ $app->setEnv($dotEnv);
 |
 */
 
-$app->execute();
+$app->execute($router);
