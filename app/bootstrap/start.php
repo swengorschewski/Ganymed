@@ -47,7 +47,7 @@ $iocContainer->bind($bindings);
 |
 */
 
-$router = new Router();
+$router = Router::getInstance();
 require_once __DIR__ . '/../routes.php';
 
 /*
