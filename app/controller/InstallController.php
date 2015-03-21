@@ -6,7 +6,7 @@ class InstallController {
     {
         $user = new User();
         $user->email = 'ganymed';
-        $user->password = password_hash('ganymed', CRYPT_BLOWFISH);
+        $user->setPassword('ganymed');
         $user->save();
     }
 
