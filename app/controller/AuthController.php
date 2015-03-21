@@ -1,7 +1,7 @@
 <?php
 
+use Ganymed\Auth\Auth;
 use Ganymed\Http\Request;
-use Ganymed\Services\Auth;
 use Ganymed\Services\Session;
 
 class AuthController {

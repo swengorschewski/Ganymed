@@ -1,6 +1,6 @@
 <?php
 
-use Ganymed\Services\Auth;
+use Ganymed\Auth\Auth;
 use Ganymed\Services\Session;
 
 class DashboardController {
