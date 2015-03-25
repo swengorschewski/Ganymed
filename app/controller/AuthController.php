@@ -1,10 +1,11 @@
 <?php
 
 use Ganymed\Auth\Auth;
+use Ganymed\Controller;
 use Ganymed\Http\Request;
 use Ganymed\Services\Session;
 
-class AuthController {
+class AuthController extends Controller {
 
     protected $session;
     protected $auth;

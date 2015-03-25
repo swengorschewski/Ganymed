@@ -1,6 +1,8 @@
 <?php
 
-class InstallController {
+use Ganymed\Controller;
+
+class InstallController extends Controller {
 
     public function seed()
     {

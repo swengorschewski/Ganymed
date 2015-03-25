@@ -1,32 +1,17 @@
 <?php
 
 use Ganymed\Auth\Auth;
-use Ganymed\Services\Session;
+use Ganymed\Controller;
 
-class DashboardController {
-
-    private $session;
-    private $auth;
-
-    /**
-     * Constructor with type hinted session and auth classes.
-     *
-     * @param Session $session
-     * @param Auth $auth
-     */
-    function __construct(Session $session, Auth $auth)
-    {
-        $this->session = $session;
-        $this->auth = $auth;
-    }
+class DashboardController extends Controller {
 
     /*
      * /dashboard GET route method which checks if the session
      * is authorized to view this page.
      */
-    public function index()
+    public function index(Auth $auth)
     {
-        if ($this->auth->check()) {
+        if ($auth->check()) {
             view('dashboard.partials.dashboard')->withLayout('dashboard.layouts.default')->render();
         } else {
             redirect('/login');
