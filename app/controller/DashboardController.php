@@ -1,6 +1,5 @@
 <?php
 
-use Ganymed\Auth\Auth;
 use Ganymed\Controller;
 
 class DashboardController extends Controller {
@@ -9,13 +8,9 @@ class DashboardController extends Controller {
      * /dashboard GET route method which checks if the session
      * is authorized to view this page.
      */
-    public function index(Auth $auth)
+    public function index()
     {
-        if ($auth->check()) {
-            view('dashboard.partials.dashboard')->withLayout('dashboard.layouts.default')->render();
-        } else {
-            redirect('/login');
-        }
+        view('dashboard.partials.dashboard')->withLayout('dashboard.layouts.default')->render();
     }
 
     public function logout()

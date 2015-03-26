@@ -3,7 +3,7 @@
 use Ganymed\Auth\Auth;
 use Ganymed\MiddlewareInterface;
 
-class AuthMiddleware implements MiddlewareInterface {
+class GuestMiddleware implements MiddlewareInterface {
 
     private $auth;
 
@@ -14,8 +14,8 @@ class AuthMiddleware implements MiddlewareInterface {
 
     public function execute()
     {
-        if(!$this->auth->check()) {
-            redirect('/login');
+        if($this->auth->check()) {
+            redirect('/dashboard');
         }
     }
 

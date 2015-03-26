@@ -3,36 +3,16 @@
 use Ganymed\Auth\Auth;
 use Ganymed\Controller;
 use Ganymed\Http\Request;
-use Ganymed\Services\Session;
 
 class AuthController extends Controller {
-
-    protected $session;
-    protected $auth;
-
-    /**
-     * Constructor with type hinted session and auth classes.
-     *
-     * @param Session $session
-     * @param Auth $auth
-     */
-    function __construct(Session $session, Auth $auth)
-    {
-        $this->session = $session;
-        $this->auth = $auth;
-    }
 
     /**
      * /login GET route method.
      */
     public function login()
     {
-        if ($this->auth->check()) {
-            redirect('/dashboard');
-        } else {
-            $session = $this->session;
-            view('dashboard.partials.login')->withData(compact('session'))->render();
-        }
+        $session = $this->session;
+        view('dashboard.partials.login')->withData(compact('session'))->render();
     }
 
     /**
@@ -40,11 +20,12 @@ class AuthController extends Controller {
      * Attempts a login with the provided credentials.
      *
      * @param Request $request
+     * @param Auth $auth
      */
-    public function doLogin(Request $request)
+    public function doLogin(Request $request, Auth $auth)
     {
         $input = $request->getInput();
-        if ($this->auth->attempt($input['email'], $input['password'])) {
+        if ($auth->attempt($input['email'], $input['password'])) {
             redirect('/dashboard');
         } else {
             redirect('/login');

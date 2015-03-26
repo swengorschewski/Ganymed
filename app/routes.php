@@ -10,12 +10,12 @@
 |
 */
 
-$router->get('/', [
-    'middleware' => 'AuthMiddleware',
-    'controller' => 'HomeController@index'
-]);
+$router->get('/', 'HomeController@index');
 
-$router->get('/login', 'AuthController@login');
+$router->get('/login', [
+    'middleware' => 'GuestMiddleware',
+    'controller' => 'AuthController@login'
+]);
 
 $router->post('/login', 'AuthController@doLogin');
 
@@ -23,4 +23,7 @@ $router->post('/logout', 'DashboardController@logout');
 
 $router->get('/install', 'InstallController@seed');
 
-$router->get('/dashboard', 'DashboardController@index');
+$router->get('/dashboard', [
+    'middleware' => 'AuthMiddleware',
+    'controller' => 'DashboardController@index'
+]);
