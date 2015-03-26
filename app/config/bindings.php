@@ -17,5 +17,8 @@ return array(
     'View' => function () {
         $paths = require __DIR__ . '/paths.php';
         return new \Ganymed\Services\View($paths['view']);
+    },
+    'AuthMiddleware' => function() {
+        return new AuthMiddleware();
     }
 );

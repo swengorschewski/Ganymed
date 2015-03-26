@@ -10,7 +10,8 @@
     "autoload": {
         "classmap": [
             "app/controller",
-            "app/models"
+            "app/models",
+            "app/middleware"
         ]
     },
     "repositories": [

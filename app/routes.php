@@ -10,7 +10,10 @@
 |
 */
 
-$router->get('/', 'HomeController@index');
+$router->get('/', [
+    'middleware' => 'AuthMiddleware',
+    'controller' => 'HomeController@index'
+]);
 
 $router->get('/login', 'AuthController@login');
 
