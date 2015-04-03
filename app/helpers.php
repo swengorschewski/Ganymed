@@ -67,6 +67,18 @@ function view($template)
     return $view->withTemplate($template);
 }
 
+/**
+ * wrapper for the view class
+ * @param $template
+ * @return \Ganymed\Templating\Template
+ */
+function template($template)
+{
+    global $iocContainer;
+    $view = $iocContainer->getClass('Template');
+    return $view->render($template);
+}
+
 function flash($message)
 {
     global $iocContainer;
