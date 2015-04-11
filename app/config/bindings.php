@@ -16,10 +16,6 @@ return array(
     },
     'View' => function () {
         $paths = require __DIR__ . '/paths.php';
-        return new \Ganymed\Services\View($paths['view']);
-    },
-    'Template' => function () {
-        $paths = require __DIR__ . '/paths.php';
-        return new \Ganymed\Templating\Template($paths['view']);
+        return new \Ganymed\Templating\View($paths['view']);
     }
 );

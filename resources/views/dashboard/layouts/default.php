@@ -14,16 +14,10 @@
 </head>
 <body>
 
-<nav class="panel shadow-z1">
-    <h1 class="panel-brand">Ganymed-Dashboard</h1>
-
-    <form class="panel-options" action="/logout" method="post">
-        <button class="panel-button ripple">Logout</button>
-    </form>
-</nav>
+@include('dashboard.partials.navigation')
 
 <div class="content">
-    <?php echo $renderedTemplate ?>
+    @yield('content')
 </div>
 
 <!-- build:js -->

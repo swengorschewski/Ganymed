@@ -15,7 +15,6 @@
 <body>
 
 <div class="content">
-    <?php echo $renderedTemplate ?>
 </div>
 
 <!-- build:js -->

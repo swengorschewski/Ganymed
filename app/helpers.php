@@ -44,39 +44,44 @@ function hashString($password)
 
 function dd($value)
 {
-    echo '<pre>';
-    print_r($value);
+    pd($value);
     die();
 }
 
 function pd($value)
 {
     echo '<pre>';
-    print_r($value);
+    if(is_array($value)) {
+        print_r(escape_array($value));
+    } elseif(is_string($value)) {
+        print_r(htmlspecialchars($value));
+    } else {
+        print_r($value);
+    }
+}
+
+function escape_array($array) {
+    foreach($array as $key => $entry) {
+        if(is_array($entry)) {
+            $array[$key] = escape_array($entry);
+        } else {
+            $array[$key] = htmlspecialchars($entry);
+        }
+    }
+
+    return $array;
 }
 
 /**
  * wrapper for the view class
- * @param $template
- * @return \Ganymed\Services\View
+ * @param $viewName
+ * @return \Ganymed\Templating\View
  */
-function view($template)
+function view($viewName)
 {
     global $iocContainer;
     $view = $iocContainer->getClass('View');
-    return $view->withTemplate($template);
-}
-
-/**
- * wrapper for the view class
- * @param $template
- * @return \Ganymed\Templating\Template
- */
-function template($template)
-{
-    global $iocContainer;
-    $view = $iocContainer->getClass('Template');
-    return $view->render($template);
+    return $view->make($viewName);
 }
 
 function flash($message)

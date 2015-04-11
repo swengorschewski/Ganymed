@@ -19,17 +19,15 @@
 
         <h1 class="slim">Sign In</h1>
 
-        <?php
-
-        if ($session->hasErrors()) {
-            echo '<div class="errors"><ul>';
-            foreach ($session->getErrors() as $error) {
-                echo '<li>' . $error . '</li>';
-            }
-            echo '</ul></div>';
-        }
-
-        ?>
+        @if($session->hasErrors())
+            <div class="errors">
+                <ul>
+                    @foreach($session->getErrors() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         <div class="input-group">
             <input type="text" name="email" required="" />

@@ -12,7 +12,7 @@ class AuthController extends Controller {
     public function login()
     {
         $session = $this->session;
-        view('dashboard.partials.login')->withData(compact('session'))->render();
+        $this->response->fromView(view('dashboard.partials.login')->with(compact('session')));
     }
 
     /**
@@ -26,6 +26,7 @@ class AuthController extends Controller {
     {
         $input = $request->getInput();
         if ($auth->attempt($input['email'], $input['password'])) {
+            flash('Login successful');
             redirect('/dashboard');
         } else {
             redirect('/login');

@@ -1,3 +1,0 @@
-Ich wurde included
-
-{{ $blib }}

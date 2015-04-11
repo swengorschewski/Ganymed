@@ -10,7 +10,8 @@ class DashboardController extends Controller {
      */
     public function index()
     {
-        view('dashboard.partials.dashboard')->withLayout('dashboard.layouts.default')->render();
+        $view = view('dashboard.partials.dashboard')->with(['session' => $this->session, 'blub' => 'test']);
+        $this->response->fromView($view);
     }
 
     public function logout()
