@@ -14,7 +14,9 @@
         <h2>Dashboard</h2>
     </div>
 
-    @if(true)
-        {{ $session->getFlashMessage() }}
-    @endif
+    <div class="flash-message">
+        @if(true)
+            {{ $session->getFlashMessage() }}
+        @endif
+    </div>
 @endsection

@@ -10,7 +10,7 @@ class DashboardController extends Controller {
      */
     public function index()
     {
-        $view = view('dashboard.partials.dashboard')->with(['session' => $this->session, 'blub' => 'test']);
+        $view = view('dashboard.partials.dashboard')->with(['session' => $this->session]);
         $this->response->fromView($view);
     }
 
