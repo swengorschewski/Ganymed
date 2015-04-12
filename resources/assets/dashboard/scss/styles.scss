@@ -1,17 +1,14 @@
-// style.scss
-@import "base/reset";
-@import "base/base";
+@import "reset";
+@import "variables";
+@import "base";
+@import "fonts";
+@import "tweaks";
+@import "animations";
 
-// layouts
-@import "layouts/layout";
-@import "layouts/layout-tablet";
-@import "layouts/layout-desktop";
+@import "components/paper-inputs";
+@import "components/paper-buttons";
+@import "components/paper-toasts";
 
-// modules
-@import "modules/fonts";
-@import "modules/paper";
-@import "modules/typo";
-@import "modules/modules";
-@import "modules/animations";
-// states
-@import "states/states";
+@import "components/panel";
+@import "components/content";
+@import "components/login";

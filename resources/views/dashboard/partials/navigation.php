@@ -1,7 +1,7 @@
-<nav class="panel shadow-z1">
-    <h1 class="panel-brand">Ganymed-Dashboard</h1>
+<header class="panel t--shadow-z1">
+    <h1 class="panel__brand">Ganymed-Dashboard</h1>
 
-    <form class="panel-options" action="/logout" method="post">
-        <button class="panel-button ripple">Logout({{ $session->get('email') }})</button>
+    <form class="panel__options" action="/logout" method="post">
+        <button class="panel__button">Logout({{ $session->get('email') }})</button>
     </form>
-</nav>
+</header>

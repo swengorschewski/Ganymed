@@ -1,0 +1,21 @@
+.toast {
+    transform: translateY(0);
+    position: absolute;
+    left: 1.5em;
+    bottom: 1.5em;
+    padding: 1em;
+    color: $color_light;
+    cursor: pointer;
+    background-color: $color_dark;
+    transition: background-color $animation_duration;
+    animation: toastSlideIn $animation_duration*2 ease;
+
+    &:hover {
+        background-color: lighten($color_dark, 5%);
+    }
+}
+
+.toast--slide-out {
+    transform: translateY(5em);
+    animation: toastSlideOut $animation_duration*2 ease;
+}

@@ -1,0 +1,68 @@
+.input-group {
+    margin: 3em 0;
+    position: relative;
+}
+
+.input-group__label {
+    color: $color_input;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    top: 0.8em;
+    left: 0;
+    transition:0.2s ease all;
+    transform-origin:left;
+}
+
+.input-group__input {
+    display: block;
+    width: 100%;
+    padding: 0.5em 0;
+    border-bottom:1px solid $color_input;
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
+    }
+}
+
+.input-group__input:focus ~ .input-group__label, .input-group__input:valid ~ .input-group__label {
+    top: -1.2em;
+    transform: scale(0.8);
+}
+
+.input-group__input:focus ~ .input-group__label {
+    color:$color_highlight;
+}
+
+.input-group__input:focus ~ .input-group__bar:before,
+.input-group__input:focus ~ .input-group__bar:after {
+    width:50%;
+}
+.input-group__input:focus  {
+    outline: none;
+    border-color: $color_highlight;
+}
+
+.input-group__bar {
+    position:relative;
+    display:block; width:100%;
+}
+.input-group__bar:before, .input-group__bar:after 	{
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background: $color_highlight;
+    transition:0.2s ease all;
+}
+.input-group__bar:before {
+    left:50%;
+}
+.input-group__bar:after {
+    right:50%;
+}
+
+.input-group:last-of-type {
+    margin-bottom: 1.5em;
+}

@@ -16,9 +16,15 @@
 
 @include('dashboard.partials.navigation')
 
-<div class="content">
+<div class="content content--center content--panel">
     @yield('content')
 </div>
+
+@if($session->hasFlashMessage())
+    <div class="toast t--shadow-z1">
+        {{ $session->getFlashMessage() }}
+    </div>
+@endif
 
 <!-- build:js -->
 <script type="application/javascript" src="/assets/dashboard/js/app.js"></script>

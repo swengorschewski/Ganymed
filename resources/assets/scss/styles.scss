@@ -1,15 +1,7 @@
 // style.scss
-@import "base/reset";
-@import "base/base";
+@import "reset";
+@import "base";
+@import "typo";
+@import "animations";
 
-// layouts
-@import "layouts/layout";
-@import "layouts/layout-tablet";
-@import "layouts/layout-desktop";
-
-// modules
-@import "modules/typo";
-@import "modules/modules";
-@import "modules/animations";
-// states
-@import "states/states";
+// components

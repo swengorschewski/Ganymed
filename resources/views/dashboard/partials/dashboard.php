@@ -1,22 +1,5 @@
 @extends('dashboard.layouts.default')
 
 @section('content')
-    <style>
-        h2 {
-            font-size: 2.4em;
-            margin-bottom: 0;
-            color: #6b6b6b;
-            font-weight: 300;
-        }
-    </style>
-
-    <div class="center-content">
-        <h2>Dashboard</h2>
-    </div>
-
-    <div class="flash-message">
-        @if(true)
-            {{ $session->getFlashMessage() }}
-        @endif
-    </div>
+    <h2 class="content__heading">Dashboard</h2>
 @endsection

@@ -1,5 +1,14 @@
-/**
- * Created by swen on 20.02.15.
- */
 
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoiYXBwLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBDcmVhdGVkIGJ5IHN3ZW4gb24gMjAuMDIuMTUuXG4gKi9cbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ==
+var toast = document.querySelector('.toast');
+
+function hideToast() {
+    toast.classList.add('toast--slide-out');
+    toast.removeEventListener('click', hideToast);
+}
+
+toast.addEventListener('click', hideToast);
+
+window.setTimeout(function() {
+    toast.classList.add('toast--slide-out');
+}, 3000);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiLCJjb21wb25lbnRzL3BhcGVyLXRvYXN0cy5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQ0FBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyIiLCJ2YXIgdG9hc3QgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcudG9hc3QnKTtcblxuZnVuY3Rpb24gaGlkZVRvYXN0KCkge1xuICAgIHRvYXN0LmNsYXNzTGlzdC5hZGQoJ3RvYXN0LS1zbGlkZS1vdXQnKTtcbiAgICB0b2FzdC5yZW1vdmVFdmVudExpc3RlbmVyKCdjbGljaycsIGhpZGVUb2FzdCk7XG59XG5cbnRvYXN0LmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgaGlkZVRvYXN0KTtcblxud2luZG93LnNldFRpbWVvdXQoZnVuY3Rpb24oKSB7XG4gICAgdG9hc3QuY2xhc3NMaXN0LmFkZCgndG9hc3QtLXNsaWRlLW91dCcpO1xufSwgMzAwMCk7Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
