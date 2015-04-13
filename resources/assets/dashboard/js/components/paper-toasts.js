@@ -1,12 +1,20 @@
-var toast = document.querySelector('.toast');
+class Toast {
+    static init() {
+        this.toastElement = document.querySelector('.toast') || null;
 
-function hideToast() {
-    toast.classList.add('toast--slide-out');
-    toast.removeEventListener('click', hideToast);
+        if(this.toastElement != null) {
+            this.toastElement.addEventListener('click', this.hideToast);
+            window.setTimeout(() => {
+                this.toastElement.classList.add('toast--slide-out');
+            }, 3000);
+        }
+
+    }
+
+    hideToast() {
+        this.toastElement.classList.add('toast--slide-out');
+        this.toastElement.removeEventListener('click', this.hideToast);
+    }
 }
 
-toast.addEventListener('click', hideToast);
-
-window.setTimeout(function() {
-    toast.classList.add('toast--slide-out');
-}, 3000);
+export default Toast;

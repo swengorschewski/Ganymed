@@ -1,6 +1,4 @@
-var blub = function() {
-    console.log('blub');
-};
-
-blub();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgYmx1YiA9IGZ1bmN0aW9uKCkge1xuICAgIGNvbnNvbGUubG9nKCdibHViJyk7XG59O1xuXG5ibHViKCk7Il0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
+(function() {
+    "use strict";
+}).call(this);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJyZXNvdXJjZXMvYXNzZXRzL2pzL21haW4uanMiLCJzb3VyY2VzQ29udGVudCI6W10sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9
