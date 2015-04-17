@@ -1,0 +1,15 @@
+.ripple {
+    overflow: hidden;
+}
+
+.ripple__element {
+    opacity: 0;
+    border-radius: 50%;
+    animation: ripple .8s ease;
+}
+
+@keyframes ripple {
+    0%      { transform: scale(0.3); opacity: 1; }
+    75%     { transform: scale(1); }
+    100%    { opacity: 0; }
+}

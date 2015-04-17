@@ -43,9 +43,8 @@
             <label class="input-group__label">Password</label>
         </div>
 
-        <button class="button">
+        <button class="button ripple">
             Submit
-            <paper-ripple></paper-ripple>
         </button>
     </form>
 </div>

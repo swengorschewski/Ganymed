@@ -5,9 +5,10 @@
 @import "tweaks";
 @import "animations";
 
-@import "components/paper-inputs";
-@import "components/paper-buttons";
-@import "components/paper-toasts";
+@import "components/paper/paper-inputs";
+@import "components/paper/paper-buttons";
+@import "components/paper/paper-toasts";
+@import "components/paper/paper-ripple";
 
 @import "components/panel";
 @import "components/content";
