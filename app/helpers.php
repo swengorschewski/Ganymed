@@ -51,21 +51,24 @@ function dd($value)
 function pd($value)
 {
     echo '<pre>';
-    if(is_array($value)) {
+    if (is_array($value)) {
         print_r(escape_array($value));
-    } elseif(is_string($value)) {
+    } elseif (is_string($value)) {
         print_r(htmlspecialchars($value));
     } else {
         print_r($value);
     }
 }
 
-function escape_array($array) {
-    foreach($array as $key => $entry) {
-        if(is_array($entry)) {
+function escape_array($array)
+{
+    foreach ($array as $key => $entry) {
+        if (is_array($entry)) {
             $array[$key] = escape_array($entry);
-        } else {
+        } elseif (is_string($entry)) {
             $array[$key] = htmlspecialchars($entry);
+        } else {
+            $array[$key] = $entry;
         }
     }
 
@@ -75,7 +78,7 @@ function escape_array($array) {
 /**
  * wrapper for the view class
  * @param $viewName
- * @return \Ganymed\Templating\View
+ * @return \Ganymed\View\View
  */
 function view($viewName)
 {
@@ -89,4 +92,18 @@ function flash($message)
     global $iocContainer;
     $session = $iocContainer->getClass('Session');
     $session->putFlashMessage($message);
+}
+
+function get_flash($element = 'div', $class = 'toast t--shadow-z1')
+{
+    global $iocContainer;
+    $session = $iocContainer->getClass('Session');
+    return $session->hasFlashMessage() ?
+        '<' . $element . ' class="' . $class . '">' . $session->getFlashMessage() . '</' . $element . '>' : '';
+}
+
+function active_route($uri, $className = 'active')
+{
+    $request = new \Ganymed\Http\Request();
+    return $request->getUri() == $uri ? $className : '';
 }
