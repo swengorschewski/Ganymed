@@ -1,0 +1,71 @@
+.panel {
+    width: 100%;
+    height: 3em;
+    position: relative;
+    color: #FFFFFF;
+    background-color: $color_highlight;
+    z-index: 1;
+}
+
+.panel--with-tabs {
+    height: 6em;
+}
+
+.header {
+    display: block;
+    height: 3em;
+}
+
+.header__brand {
+    font-size: 1.3em;
+    float: left;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0.62em 0 0 1.24em
+}
+
+.header__options {
+    float: right;
+    height: 100%;
+}
+
+.header__button {
+    float: left;
+    height: 100%;
+    padding: 0 2em;
+    transition: background-color $animation_duration;
+
+    &:hover {
+        background-color: lighten($color_highlight, 5%);
+    }
+}
+
+.tabs {
+    display: block;
+    height: 3em;
+}
+
+.tabs li {
+    height: 3em;
+    float: left;
+    max-width: 10em;
+    width: 33%;
+    text-align: center;
+}
+
+.tab {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    padding: 1em;
+
+    &:hover {
+
+    }
+}
+
+.tab--active {
+    border-bottom: 2px solid #ffffff;
+}
