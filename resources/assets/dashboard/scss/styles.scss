@@ -1,15 +1,18 @@
 @import "reset";
 @import "variables";
+
+@import "components/paper/paper-panels";
+@import "components/paper/paper-forms";
+@import "components/paper/paper-inputs";
+@import "components/paper/paper-buttons";
+@import "components/paper/paper-toasts";
+@import "components/paper/paper-ripple";
+@import "components/paper/paper-spinner";
+
 @import "base";
 @import "fonts";
 @import "tweaks";
 @import "animations";
 
-@import "components/paper/paper-inputs";
-@import "components/paper/paper-buttons";
-@import "components/paper/paper-toasts";
-@import "components/paper/paper-ripple";
-
-@import "components/panel";
 @import "components/content";
 @import "components/login";

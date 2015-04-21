@@ -1,6 +1,24 @@
 .input-group {
-    margin: 3em 0;
+    margin: 3em 0 0 0;
     position: relative;
+}
+
+.input-group--last {
+    margin-bottom: 1.5em;
+}
+
+.input-group__select {
+    color: $color_input;
+    font: inherit;
+    display: block;
+    width: 100%;
+    height: 2em;
+    background-color: inherit;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-bottom:1px solid $color_input;
 }
 
 .input-group__label {
@@ -17,7 +35,8 @@
 .input-group__input {
     display: block;
     width: 100%;
-    padding: 0.5em 0;
+    height: 2em;
+    font: inherit;
     border-bottom:1px solid $color_input;
 
     &:-webkit-autofill {
@@ -61,8 +80,4 @@
 }
 .input-group__bar:after {
     right:50%;
-}
-
-.input-group:last-of-type {
-    margin-bottom: 1.5em;
 }

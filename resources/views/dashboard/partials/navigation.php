@@ -1,7 +1,10 @@
 <header class="panel t--shadow-z1">
-    <h1 class="panel__brand">Ganymed-Dashboard</h1>
 
-    <form class="panel__options" action="/logout" method="post">
-        <button class="panel__button ripple">Logout({{ $session->get('email') }})</button>
-    </form>
+    <div class="header">
+        <h1 class="header__brand">Ganymed-Dashboard</h1>
+
+        <form class="header__options" action="/logout" method="post">
+            <button class="header__button ripple">Logout({{ $session->get('email') }})</button>
+        </form>
+    </div>
 </header>
