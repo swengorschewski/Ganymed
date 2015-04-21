@@ -23,6 +23,7 @@ $router->post('/logout', 'DashboardController@logout');
 
 $router->get('/install', 'InstallController@seed');
 
+
 $router->get('/dashboard', [
     'middleware' => 'AuthMiddleware',
     'controller' => 'DashboardController@index'

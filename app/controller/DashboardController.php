@@ -1,5 +1,6 @@
 <?php
 
+use Ganymed\Auth\Auth;
 use Ganymed\Controller;
 
 class DashboardController extends Controller {
@@ -14,9 +15,10 @@ class DashboardController extends Controller {
         $this->response->fromView($view);
     }
 
-    public function logout()
+    public function logout(Auth $auth)
     {
-        $this->session->forget();
+        $auth->logout();
+        flash('Logout successful');
         redirect('/login');
     }
 

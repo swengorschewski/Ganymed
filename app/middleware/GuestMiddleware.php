@@ -14,7 +14,7 @@ class GuestMiddleware implements MiddlewareInterface {
 
     public function execute()
     {
-        if($this->auth->check()) {
+        if ($this->auth->check()) {
             redirect('/dashboard');
         }
     }
