@@ -16,6 +16,6 @@ return array(
     },
     'View' => function () {
         $paths = require __DIR__ . '/paths.php';
-        return new \Ganymed\Templating\View($paths['view']);
+        return new \Ganymed\View\View($paths['view']);
     }
 );
